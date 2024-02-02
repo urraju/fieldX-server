@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+const { MongoClient, ServerApiVersion  } = require("mongodb");
 const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
@@ -82,7 +82,7 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/area", async (req, res) => {
+    app.get("/area",  async (req, res) => {
       const result = await areaCollection.find().toArray();
       res.send(result);
     });
